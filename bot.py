@@ -10,7 +10,7 @@ from plugins import web_server
 import pytz
 import aiohttp
 from aiohttp import web
-from utils import temp
+from utils import temp, start_bot
 from pyrogram.raw.all import layer
 from pyrogram import types
 from Script import script 
@@ -47,6 +47,7 @@ class Bot(Client):
         await web.TCPSite(app, "0.0.0.0", 8080).start()
         logger.info("Running...")
         print(f"{me.first_name} | @{me.username} started...")
+        await start_bot()
         tz = pytz.timezone('Asia/Kolkata')
         today = date.today()
         now = datetime.now(tz)
