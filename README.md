@@ -56,7 +56,7 @@
 
 ## Variables
 
-### Required Variables
+### Required Variables for main bot
 * `BOT_TOKEN`: Create a bot using [@BotFather](https://telegram.dog/BotFather), and get the Telegram API token.
 * `API_ID`: Get this value from [telegram.org](https://my.telegram.org/apps)
 * `API_HASH`: Get this value from [telegram.org](https://my.telegram.org/apps)
@@ -74,7 +74,12 @@
 * `SPOTIFY_CLIENT_ID` : Get the value from [spotify developer](https://developer.spotify.com/)
 * `SPOTIFY_CLIENT_SECRET` : Get the value from [spotify developer](https://developer.spotify.com/)
 
-## CMD
+  ### Required variables for second bot (photo saver bot)
+  * `BOT_TOKEN_2`:  get the Telegram API token for the second bot (photo saver bot)
+  * `DATABASE_NAME_2`: Get this value from mongo db for the second bot (photo saver bot)
+  * `DATABASE_URI_2`: Get this value from mongo db for the second bot (photo saver bot)
+
+## CMD for main bot
 
 ```
 /start - to check i am in alive
@@ -104,7 +109,16 @@ telegraph decoder on command needed send the telegraph link
 /torrent - send the movie name with /torrent
 ```
 
-## CMD USAGE
+## photo saver bot commands
+```
+start - to check the bot is alive or not.
+stats - to get the details.
+pics - List your saved photos.
+del_one - Delete a specific photo. reply to the photo that you have sended.
+del_many - Delete all your saved photos.
+```
+
+## CMD USAGE for main bot
 
 ```
 * /telegraph  reply to a supported media media
@@ -132,6 +146,15 @@ telegraph decoder on command needed send the telegraph link
 * /image {search image}
 * /tgsticker {sticker search}
 * /torrent {movie_name}
+```
+
+## CMD usage for second bot (photo saver bot)
+```
+start - to check the bot is alive or not.
+stats - to get the details.
+pics - List your saved photos.
+del_one - Delete a specific photo. reply to the photo that you have sended.
+del_many - Delete all your saved photos.
 ```
 
 ## Telegram Bot - Music Downloader and More!
