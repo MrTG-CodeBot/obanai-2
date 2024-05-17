@@ -161,6 +161,8 @@ del_many - Delete all your saved photos.
 
 Welcome to our Telegram Bot for downloading songs from YouTube, download ringtune, searching for songs on Spotify, f_sub,report to admins, download instagram reels, stories and post,generating telegraph, getting sticker id, chat gpt function, searching for repositories on GitHub,font changer,send feedback and some other functions.
 
+And This repo helps us to run both bots from one repo.
+
 
 ## How to Use
 
