@@ -23,7 +23,7 @@ ABOUT_TXT="""
 
 client = MongoClient(DATABASE_URI_2)
 db = client[DATABASE_NAME_2]
-collection = db["pic"]
+collection = db["upic"]
 
 @Client.on_message(filters.command('stats')  & filters.private)
 async def get_stats(bot, message):
