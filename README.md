@@ -109,7 +109,7 @@ telegraph decoder on command needed send the telegraph link
 /torrent - send the movie name with /torrent
 ```
 
-## photo saver bot commands
+## CMD for second bot (photo saver bot)
 ```
 start - to check the bot is alive or not.
 stats - to get the details.
