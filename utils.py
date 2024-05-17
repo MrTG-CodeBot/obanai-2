@@ -10,11 +10,13 @@ from Script import script
 import math
 from datetime import datetime
 from typing import List
+from database_pic.pic_users_db import sd
 from database.users_db import db
 from bs4 import BeautifulSoup
 from PIL import Image
 from io import BytesIO
 import requests
+from info import DATABASE_URI, DATABASE_NAME, API_ID, API_HASH, BOT_TOKEN_2
 
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
@@ -94,6 +96,41 @@ def split_list(l, n):
     for i in range(0, len(l), n):
         yield l[i:i + n]  
 
+async def start_bot():
+  try:
+    pic_client = Client(
+        name = "pic",
+        api_id = API_ID,
+        api_hash = API_HASH,
+        bot_token = BOT_TOKEN_2,
+        plugins={"root": "plugins_pic"}
+    )
+    await pic_client.start()
+    mine = await pic_client.get_me()
+    print(f"{mine.first_name} | @{mine.username}")
+  except Exception as e:
+    print(e)
+
+async def broadcast_messager(user_id, message):
+    try:
+        await message.copy(chat_id=user_id)
+        return True, "Success"
+    except FloodWait as e:
+        await asyncio.sleep(e.x)
+        return await broadcast_messager(user_id, message)
+    except InputUserDeactivated:
+        await sd.delete_user(int(user_id))
+        logging.info(f"{user_id}-Removed from Database, since deleted account.")
+        return False, "Deleted"
+    except UserIsBlocked:
+        logging.info(f"{user_id} -Blocked the bot.")
+        return False, "Blocked"
+    except PeerIdInvalid:
+        await sd.delete_user(int(user_id))
+        logging.info(f"{user_id} - PeerIdInvalid")
+        return False, "Error"
+    except Exception as e:
+        return False, "Error"
 
 async def broadcast_messages(user_id, message):
     try:
