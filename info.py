@@ -16,7 +16,13 @@ def is_enabled(value, default):
 # basic information
 API_ID = int(os.environ.get('API_ID', ''))
 API_HASH = os.environ.get('API_HASH', '')
+
+# for the main bot
 BOT_TOKEN = os.environ.get('BOT_TOKEN', '')
+
+# for the photo saver bot
+BOT_TOKEN_2 = os.environ.get('BOT_TOKEN', '')
+
 PORT = os.environ.get("PORT", "8080")
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
 ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '').split()]
@@ -37,11 +43,18 @@ ADMIN_GROUP_ID = int(environ.get('ADMIN_GROUP_ID', ''))
 S_GROUP = environ.get('S_GROUP', "")
 S_CHANNEL = environ.get('S_CHANNEL', "")
 
-# for mongodb
-DATABASE_NAME = os.environ.get("DB_NAME", "")     
-DATABASE_URI  = os.environ.get("DB_URL", "")
+# for the pic saver bot 
+PIC_LOG_CHANNEL = int(os.environ.get("PIC_LOG_CHANNEL", ""))
+
+# for mongodb and for the main bot
+DATABASE_NAME = os.environ.get("DATABASE_NAME", "")     
+DATABASE_URI  = os.environ.get("DATABASE_URI", "")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 MONGO_URL = os.environ.get('MONGO_URL', "")
+
+# for the photo saver bot
+DATABASE_NAME_2 = os.environ.get("DATABASE_NAME_2", "")
+DATABASE_URI_2 = os.environ.get("DATABASE_URI_2", "")
 
 # for google ai 
 # how to get the api key == https://t.me/sd_bots/256 (copy this link and search on telegram)
