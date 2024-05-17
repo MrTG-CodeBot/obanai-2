@@ -41,6 +41,12 @@ Mʏ Nᴀᴍᴇ Is <a href=https://t.me/{}>{}</a>. ɪ ᴀᴍ ᴀ sᴘᴇᴄɪᴀ�
     SUPPORT_TXT = """ᴛʜᴇsᴇ ᴀʀᴇ ᴍʏ sᴜᴘᴘᴏʀᴛ ᴄʜᴀɴɴᴇʟ ᴀɴᴅ ɢʀᴏᴜᴘ. ɪғ ᴀɴʏ ᴘʀᴏʙʟᴇᴍ, ʀᴇᴘᴏʀᴛ ᴛᴏ ᴛʜᴇ ᴀᴅᴍɪɴ
 ᴄʀᴇᴅɪᴛs @MrTG_Coder"""
 
+    STATS_TXT =  """<b>◉ ᴛᴏᴛᴀʟ ᴜꜱᴇʀꜱ: <code>{}</code></b>
+◉ ᴛᴏᴛᴀʟ ᴘʜᴏᴛᴏs: <code>{}</code>
+◉ ᴜʀ ᴘʜᴏᴛᴏ ᴄᴏᴜɴᴛ :<code>{}</code>
+◉ sɪᴢᴇ: <code>{}</code>
+◉ ғʀᴇᴇ: <code>{}</code>"""
+    
     STATUS_TXT =  """<b>◉ ᴛᴏᴛᴀʟ ᴜꜱᴇʀꜱ: <code>{}</code></b>
 ◉ ᴛᴏᴛᴀʟ ᴄʜᴀᴛꜱ: <code>{}</code>"""
 
